@@ -1,6 +1,6 @@
 import { Redirect } from 'expo-router';
 
-// REDIRECIONA PARA A SCREENA
+// Para a ScreenA
 export default function Index() {
   return <Redirect href="/ScreenA" />;
 }

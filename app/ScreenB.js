@@ -1,23 +1,21 @@
-import { View, Text, TouchableOpacity } from 'react-native'; // COMPONENTES DO REACT NATIVE
-import { useSelector, useDispatch } from 'react-redux'; // ACESSA O ESTADO DE ARMAZENAMENTO GLOBAL (PARA QUE AS DUAS PAGINAS ESTEJA EM SINCRONIA)   
+import { View, Text, TouchableOpacity } from 'react-native'; // Componentes react
+import { useSelector, useDispatch } from 'react-redux'; // Entra no estado de armazenamento global (serve para que as duas paginas estajam sincronizadas)
 import { increment, decrement, reset } from '../redux/counterSlice';
-import { router } from 'expo-router'; // USADO PARA NAVEGAR ENTRE PAGINAS
-import { styles } from './styles'; // LIGANDO O ARQUIVO DE ESTILOS
+import { router } from 'expo-router'; // Navegação entre as paginas
+import { styles } from './styles'; // Ligado ao css
 
-
-
-// FUNCAO PARA ACESSAR O VARLOR DO CONTADOR
+// Function para acessar o contador
 export default function ScreenB() {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Screen B</Text>
+    <View style={styles.containerB}>
+      <Text style={styles.title}>Contador Global Screen B</Text>
       <Text style={styles.count}>Contador: {count}</Text>
 
       <TouchableOpacity style={styles.button} onPress={() => dispatch(increment())}>
-        <Text style={styles.buttonText}>Acrecentar</Text>
+        <Text style={styles.buttonText}>Aumentar</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.button} onPress={() => dispatch(decrement())}>

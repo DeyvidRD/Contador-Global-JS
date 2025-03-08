@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit'; // REDUX TOOLKIT PERMITE CRIAR A STORE JA CONFIGURADA
-import counterReducer from './counterSlice'; // RELACIONA AO CONTADOR
+import { configureStore } from '@reduxjs/toolkit';
+import counterReducer from './counterSlice';
 
 const store = configureStore({
   reducer: {

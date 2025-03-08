@@ -1,9 +1,9 @@
-import { Slot } from 'expo-router'; // PERMITE A TROCA DE PAGINAS SEM RECARREGAR
-import { Provider } from 'react-redux'; // ESTADO GLOBAL
+import { Slot } from 'expo-router'; // Faz com que as paginas troquem sem carregar / mais rapido
+import { Provider } from 'react-redux'; // Estado global
 import store from '../redux/store';
 
 
-// A FUNÇÃO PERMITE QUE TODO O APP TENHA O ESTADO GLOBAL
+// Esta função permitira que todo o app tenha o estado global
 export default function RootLayout() {
   return (
     <Provider store={store}>
